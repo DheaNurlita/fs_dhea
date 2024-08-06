@@ -6,4 +6,15 @@ class ProductsRepo {
     logz.s('random value coming from ProductsRepo');
     return x;
   }
+
+  Future<List<Products>> readProduct() async {
+    List<Products> product = [];
+    final result = await x1fbFirestore.st.readCollection(_pv.collProduct);
+
+    for (var element in result.docs) {
+      product.add(Products.fromMap(element.data()));
+    }
+
+    return product;
+  }
 }
