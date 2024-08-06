@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "487825360266",
+    "project_id": "fsdhea-d9b10",
+    "storage_bucket": "fsdhea-d9b10.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:487825360266:android:f12199228c2b4d3dd7b473",
+        "android_client_info": {
+          "package_name": "com.fs_dhea.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfQHxPhDWRVetNGIww1UbcdwIvMUNADQQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
