@@ -16,4 +16,12 @@ class ProductListCtrl {
   //   // logx.i(result.data().toString());
   //   // logx.i(result.toString());
   // }
+
+  // readCollection() async {
+  //   final result = await FirebaseFirestore.instance.collection('products').get();
+
+  //   for (var element in result.docs) {
+  //     logx.i(element.id);
+  //   }
+  // }
 }

@@ -6,8 +6,13 @@ final x1fbFirestore = RM.inject(
 );
 
 class FbFireStore {
-  Future<QuerySnapshot<Map<String, dynamic>>> readCollection(String collProduct) async {
+  Future<QuerySnapshot<Map<String, dynamic>>> read(String collProduct) async {
     final result = await FirebaseFirestore.instance.collection(collProduct).get();
+
     return result;
+  }
+
+  Future<void> createDocument(String collProduct, String doc, Map<String, dynamic> data) async {
+    await FirebaseFirestore.instance.collection(collProduct).doc(doc).set(data);
   }
 }

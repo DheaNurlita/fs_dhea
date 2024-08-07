@@ -19,4 +19,10 @@ class ProductsRepoMock implements ProductsRepo {
     // TODO: implement addToList
     throw UnimplementedError();
   }
+
+  @override
+  Future createDocument(Products product) {
+    // TODO: implement createDocument
+    throw UnimplementedError();
+  }
 }

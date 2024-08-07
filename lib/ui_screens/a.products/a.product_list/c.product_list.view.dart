@@ -17,15 +17,14 @@ class ProductListView extends StatelessWidget {
             child: CircularProgressIndicator(),
           ),
           onError: (error, refreshError) => const Center(
-            child: Text('errorr'),
+            child: Text('error'),
           ),
           onData: (data) => Column(
             children: [
               ...List.generate(
-                _dt.rxProductList.st.length,
+                _dt.rxProductList.state.length,
                 (index) => ListTile(
                   title: Text(_dt.rxProductList.st[index].name),
-                  subtitle: Text(_dt.rxProductList.st[index].id),
                 ),
               )
             ],

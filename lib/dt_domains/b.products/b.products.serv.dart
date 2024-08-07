@@ -20,4 +20,8 @@ class ProductsServ {
   addToList(List<Products> moreProduct) async {
     _pv.rxProductlist.st = [..._pv.rxProductlist.st, ...moreProduct];
   }
+
+  createDoc(Products product) async {
+    await _rp.createDocument(product);
+  }
 }
