@@ -18,9 +18,7 @@ class ProductAddCtrl {
       price: int.parse(_dt.rxPrice.value),
       quantity: int.parse(_dt.rxQuantity.value),
     );
-    await FirebaseFirestore.instance.collection('products').doc().set(product.toMap());
-
-    Serv.products.createDoc(product);
+    _sv.createDoc(product);
     _dt.rxProductList.st = [..._dt.rxProductList.st]..insert(0, product);
     nav.back();
   }

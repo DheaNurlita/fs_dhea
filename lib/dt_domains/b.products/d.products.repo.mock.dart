@@ -10,19 +10,20 @@ class ProductsRepoMock implements ProductsRepo {
 
   @override
   Future<List<Products>> readProduct() {
-    // TODO: implement readProduct
     throw UnimplementedError();
   }
 
-  @override
   addToList(List<Products> moreProduct) {
-    // TODO: implement addToList
     throw UnimplementedError();
   }
 
   @override
   Future createDocument(Products product) {
-    // TODO: implement createDocument
+    throw UnimplementedError();
+  }
+
+  @override
+  Future<Products> readDocDetail(String docId) {
     throw UnimplementedError();
   }
 }

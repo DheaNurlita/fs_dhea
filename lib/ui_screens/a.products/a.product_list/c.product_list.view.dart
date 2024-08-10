@@ -22,11 +22,21 @@ class ProductListView extends StatelessWidget {
           onData: (data) => Column(
             children: [
               ...List.generate(
-                _dt.rxProductList.state.length,
-                (index) => ListTile(
-                  title: Text(_dt.rxProductList.st[index].name),
-                ),
-              )
+                  _dt.rxProductList.state.length,
+                  (index) => OnReactive(
+                        () => SingleChildScrollView(
+                          child: ListTile(
+                            onTap: () async {
+                              _ct.selectedId(_dt.rxProductList.st[index].id);
+                            },
+                            selected: _dt.selectedId.st == _dt.rxProductList.st[index].id,
+                            title: Text(
+                              _dt.rxProductList.st[index].name,
+                            ),
+                            subtitle: Text(_dt.rxProductList.st[index].id),
+                          ),
+                        ),
+                      ))
             ],
           ),
         ));

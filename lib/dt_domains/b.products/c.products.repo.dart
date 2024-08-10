@@ -20,7 +20,7 @@ class ProductsRepo {
 
   Future<List<Products>> readProduct() async {
     List<Products> product = [];
-    final result = await x1fbFirestore.st.read(_pv.collProduct);
+    final result = await x1fbFirestore.st.readCollection(_pv.collProduct);
 
     for (var element in result.docs) {
       product.add(
@@ -38,5 +38,11 @@ class ProductsRepo {
       product.id,
       product.toMap(),
     );
+  }
+
+  Future<Products> readDocDetail(String docId) async {
+    final result = await x1fbFirestore.st.readDocument(_pv.collProduct, docId);
+
+    return Products.fromMap(result.data() ?? {});
   }
 }

@@ -1,7 +1,4 @@
-import 'dart:math';
-
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
 import 'package:fs_dhea/dt_domains/_index.dart';
 import 'package:states_rebuilder/states_rebuilder.dart';
@@ -23,3 +20,4 @@ part 'widgets/e.product_add.quantity.dart';
 
 ProductAddData get _dt => Data.productAdd.st;
 ProductAddCtrl get _ct => Ctrl.productAdd;
+ProductsServ get _sv => Serv.products;

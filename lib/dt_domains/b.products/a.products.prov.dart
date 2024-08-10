@@ -27,4 +27,14 @@ class ProductsProv {
       },
     ),
   );
+
+  final rxSelected = RM.inject(
+    () => '',
+  );
+
+  final rxProductDetail = RM.injectFuture<Products>(
+    // ignore: null_argument_to_non_null_type
+    () => Future.value(null),
+    sideEffects: SideEffects(initState: _sv.initProductState),
+  );
 }

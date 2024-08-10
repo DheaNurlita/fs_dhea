@@ -1,7 +1,5 @@
 import 'dart:math';
 
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:flutter/material.dart';
 import 'package:fs_dhea/dt_domains/_index.dart';
 import 'package:fs_dhea/dt_sources/_index.dart';
 import 'package:states_rebuilder/states_rebuilder.dart';

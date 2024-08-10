@@ -9,4 +9,6 @@ class ProductListData {
 
   final rxProductList = Prov.products.st.rxProductlist;
   final rxProductLoader = Prov.products.st.rxProductLoader;
+
+  final selectedId = Prov.products.st.rxSelected;
 }
