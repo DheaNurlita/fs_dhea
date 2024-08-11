@@ -13,26 +13,43 @@ class ProductsServ {
     logzz.i(ProductsServ, 'rxCounter setState success');
   }
 
+  //*----------------------------------------------------------------------------
+
   initProduct() async {
-    _pv.rxProductLoader.stateAsync = _rp.readProduct();
+    // await Future.delayed(Duration.zero);
+    _pv.rxProductLoader.stateAsync = readProduct();
   }
+
+  //*----------------------------------------------------------------------------
+
+  Future<List<Products>> readProduct() async {
+    return await _rp.readProduct();
+  }
+
+//*----------------------------------------------------------------------------
 
   addToList(List<Products> moreProduct) async {
     _pv.rxProductlist.st = [..._pv.rxProductlist.st, ...moreProduct];
   }
 
+//*----------------------------------------------------------------------------
+
   createDoc(Products product) async {
     await _rp.createDocument(product);
   }
 
-  initProductState() async {
-    _pv.rxProductDetail.stateAsync = _rp.readDocDetail(_pv.rxSelected.st);
-  }
+//*----------------------------------------------------------------------------
 
   chooseSelectedId(String id) async {
-    _pv.rxSelected.refresh();
+    // _pv.rxSelected.refresh();
     _pv.rxSelected.setState(
       (s) => id,
     );
+  }
+
+  //*----------------------------------------------------------------------------
+
+  initProductDetail() {
+    _pv.rxProductDetail.stateAsync = _rp.readDocDetail(_pv.rxSelected.st);
   }
 }

@@ -19,24 +19,40 @@ class ProductListView extends StatelessWidget {
           onError: (error, refreshError) => const Center(
             child: Text('error'),
           ),
-          onData: (data) => Column(
+          onData: (data) => Wrap(
             children: [
               ...List.generate(
-                  _dt.rxProductList.state.length,
-                  (index) => OnReactive(
-                        () => SingleChildScrollView(
-                          child: ListTile(
-                            onTap: () async {
-                              _ct.selectedId(_dt.rxProductList.st[index].id);
-                            },
-                            selected: _dt.selectedId.st == _dt.rxProductList.st[index].id,
-                            title: Text(
-                              _dt.rxProductList.st[index].name,
+                _dt.rxProductList.state.length,
+                (index) => OnReactive(
+                  () => SingleChildScrollView(
+                      child: Padding(
+                    padding: const EdgeInsets.all(10),
+                    child: InkWell(
+                      onTap: () async {
+                        _ct.selectedId(_dt.rxProductList.st[index].id);
+                      },
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Container(
+                            height: 120,
+                            width: 120,
+                            color: const Color.fromARGB(255, 255, 196, 217),
+                            child: const Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                SizedBox(width: 40),
+                              ],
                             ),
-                            subtitle: Text(_dt.rxProductList.st[index].id),
                           ),
-                        ),
-                      ))
+                          Text(_dt.rxProductList.st[index].name),
+                          Text('RP. ${_dt.rxProductList.st[index].price.toString()}'),
+                        ],
+                      ),
+                    ),
+                  )),
+                ),
+              )
             ],
           ),
         ));

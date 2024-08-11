@@ -32,9 +32,8 @@ class ProductsProv {
     () => '',
   );
 
-  final rxProductDetail = RM.injectFuture<Products>(
-    // ignore: null_argument_to_non_null_type
-    () => Future.value(null),
-    sideEffects: SideEffects(initState: _sv.initProductState),
-  );
+  final rxProductDetail = RM.injectFuture<Products?>(() => Future.value(null),
+      sideEffects: SideEffects(
+        initState: () => _sv.initProductDetail(),
+      ));
 }

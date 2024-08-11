@@ -42,6 +42,7 @@ class ProductsRepo {
 
   Future<Products> readDocDetail(String docId) async {
     final result = await x1fbFirestore.st.readDocument(_pv.collProduct, docId);
+    // final productResult = Products.fromMap(result.data());
 
     return Products.fromMap(result.data() ?? {});
   }

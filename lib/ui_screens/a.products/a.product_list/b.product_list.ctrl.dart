@@ -7,26 +7,9 @@ class ProductListCtrl {
 
   updateRandom() => Serv.sample.updateRandom();
 
-  // readCollection() async {
-  //   final result = await FirebaseFirestore.instance.collection('products').get();
-  //   for (var element in result.docs) {
-  //     logx.i(element.id);
-  //   }
-
-  //   // logx.i(result.data().toString());
-  //   // logx.i(result.toString());
-  // }
-
-  // readCollection() async {
-  //   final result = await FirebaseFirestore.instance.collection('products').get();
-
-  //   for (var element in result.docs) {
-  //     logx.i(element.id);
-  //   }
-  // }
-
   selectedId(String id) {
     Serv.products.chooseSelectedId(id);
+    logx.i(_dt.selectedId.st);
     nav.to(Routes.productDetail);
   }
 }

@@ -3,11 +3,13 @@ part of '_index.dart';
 class Routes {
   Routes._();
 
-  static const home = '/product_list';
+  // static const home = '/';
+  static const home = '/home';
   static const sampleSatu = '/sample_satu';
   static const sampleDua = '/sample_dua';
   static const sampleTiga = '/sample_tiga';
-  static const productList = '/';
+  static const productList = '/product_list';
+  // static const productList = '/';
 
   static const productAdd = '/product_add';
   static const productDetail = '/product_detail';
