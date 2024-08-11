@@ -59,4 +59,16 @@ class ProductsServ {
     _rp.deleteProduct(_pv.rxSelected.st);
     _pv.rxProductlist.st = [..._pv.rxProductlist.st]..removeWhere((element) => element.id == _pv.rxSelected.st);
   }
+
+  //*----------------------------------------------------------------------------
+
+  Future updateProduct(Products product) async {
+    await _rp.updateDoc(product);
+    Prov.products.st.rxProductlist.setState((s) {
+      final result = _pv.rxProductlist.st.indexWhere(
+        (element) => element.id == _pv.rxSelected.st,
+      );
+      return s[result] = product;
+    });
+  }
 }

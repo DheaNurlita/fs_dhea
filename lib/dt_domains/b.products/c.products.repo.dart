@@ -50,4 +50,12 @@ class ProductsRepo {
   Future deleteProduct(String docId) async {
     await x1fbFirestore.st.deleteDoc(_pv.collProduct, docId);
   }
+
+  Future updateDoc(Products product) async {
+    await x1fbFirestore.st.updateProduct(
+      _pv.collProduct,
+      product.id,
+      product.toMap(),
+    );
+  }
 }

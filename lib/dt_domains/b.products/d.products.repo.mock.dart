@@ -29,7 +29,11 @@ class ProductsRepoMock implements ProductsRepo {
 
   @override
   Future deleteProduct(String docId) {
-    // TODO: implement deleteProduct
+    throw UnimplementedError();
+  }
+
+  @override
+  Future updateDoc(Products product) {
     throw UnimplementedError();
   }
 }

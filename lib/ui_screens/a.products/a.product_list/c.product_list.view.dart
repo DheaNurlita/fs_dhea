@@ -49,26 +49,26 @@ class ProductListView extends StatelessWidget {
                           Text('RP. ${_dt.rxProductList.st[index].price.toString()}'),
                           IconButton(
                             onPressed: () async {
-                              final product = Products(
-                                id: _dt.rxProductList.st[index].id,
-                                name: generateWordPairs().take(2).join(''),
-                                imageUrl: '',
-                                description: generateWordPairs().take(5).join('   '),
-                                price: Random().nextInt(100),
-                                quantity: Random().nextInt(1000),
-                                createdAt: DateTime.now().toString(),
-                              );
-                              await FirebaseFirestore.instance
-                                  .collection('products')
-                                  .doc(_dt.rxProductList.st[index].id)
-                                  .update(product.toMap());
+                              // final product = Products(
+                              //   id: _dt.rxProductList.st[index].id,
+                              //   name: generateWordPairs().take(2).join(''),
+                              //   imageUrl: '',
+                              //   description: generateWordPairs().take(5).join('   '),
+                              //   price: Random().nextInt(100),
+                              //   quantity: Random().nextInt(1000),
+                              //   createdAt: DateTime.now().toString(),
+                              // );
+                              // await FirebaseFirestore.instance
+                              //     .collection('products')
+                              //     .doc(_dt.rxProductList.st[index].id)
+                              //     .update(product.toMap());
 
-                              Prov.products.st.rxProductlist.setState((s) {
-                                final result = Prov.products.st.rxProductlist.st.indexWhere(
-                                  (element) => element.id == _dt.rxProductList.st[index].id,
-                                );
-                                return result;
-                              });
+                              // Prov.products.st.rxProductlist.setState((s) {
+                              //   final result = Prov.products.st.rxProductlist.st.indexWhere(
+                              //     (element) => element.id == _dt.rxProductList.st[index].id,
+                              //   );
+                              //   return result;
+                              // });
                             },
                             icon: const Icon(Icons.edit),
                           ),
