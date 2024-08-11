@@ -46,4 +46,8 @@ class ProductsRepo {
 
     return Products.fromMap(result.data() ?? {});
   }
+
+  Future deleteProduct(String docId) async {
+    await x1fbFirestore.st.deleteDoc(_pv.collProduct, docId);
+  }
 }

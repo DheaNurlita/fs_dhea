@@ -22,4 +22,9 @@ class FbFireStore {
 
     return result;
   }
+
+  Future deleteDoc(String collProduct, String docId) async {
+    await FirebaseFirestore.instance.collection(collProduct).doc(docId).delete();
+    nav.to(Routes.productList);
+  }
 }

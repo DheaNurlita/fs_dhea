@@ -52,4 +52,11 @@ class ProductsServ {
   initProductDetail() {
     _pv.rxProductDetail.stateAsync = _rp.readDocDetail(_pv.rxSelected.st);
   }
+
+  //*----------------------------------------------------------------------------
+
+  delete() {
+    _rp.deleteProduct(_pv.rxSelected.st);
+    _pv.rxProductlist.st = [..._pv.rxProductlist.st]..removeWhere((element) => element.id == _pv.rxSelected.st);
+  }
 }
