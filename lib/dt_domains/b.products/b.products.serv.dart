@@ -71,4 +71,11 @@ class ProductsServ {
       return s[result] = product;
     });
   }
+
+  //*----------------------------------------------------------------------------
+
+  Future uploadImage(XFile? uploadImage, String docId) async {
+    final imageFromStorage = await _rp.uploadImage(uploadImage, _pv.rxSelected.state);
+    return imageFromStorage;
+  }
 }

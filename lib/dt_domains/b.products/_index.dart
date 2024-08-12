@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:fs_dhea/dt_domains/_index.dart';
 import 'package:fs_dhea/dt_sources/_index.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:states_rebuilder/states_rebuilder.dart';
 
 import '../../app/_index.dart';

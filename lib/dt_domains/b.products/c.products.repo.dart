@@ -58,4 +58,19 @@ class ProductsRepo {
       product.toMap(),
     );
   }
+
+  //*--------------------------------------------------------------------------
+  Future uploadImage(XFile? pickedImage, String ref) async {
+    final result = await x1storage.st.uploadStorage(
+      pickedFile: pickedImage,
+      ref: '${_pv.collProduct}/${_pv.rxSelected.st}',
+    );
+    return result;
+  }
+
+  //*--------------------------------------------------------------------------
+
+  Future deleteImage() async {
+    await x1storage.st.deleteImage('${_pv.collProduct}/${_pv.rxSelected.st}');
+  }
 }
