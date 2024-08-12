@@ -30,4 +30,8 @@ class ProductAddData {
     Validate.isNotEmpty,
     Validate.isNumeric,
   ]);
+
+  final rxPickedFile = RM.inject<XFile?>(
+    () => null,
+  );
 }

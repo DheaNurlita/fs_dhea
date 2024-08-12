@@ -1,5 +1,9 @@
+import 'dart:io';
+
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:fs_dhea/dt_domains/_index.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:states_rebuilder/states_rebuilder.dart';
 import 'package:uuid/uuid.dart';
 
@@ -14,8 +18,9 @@ part 'widgets/b.product_add.fab.dart';
 part 'widgets/c.product_add.name.dart';
 part 'widgets/d.product_add.description.dart';
 part 'widgets/e.product_add.price.dart';
-part 'widgets/e.product_add.submit.dart';
-part 'widgets/e.product_add.quantity.dart';
+part 'widgets/g.product_add.submit.dart';
+part 'widgets/f.product_add.quantity.dart';
+part 'widgets/h.product_add.image.dart';
 
 ProductAddData get _dt => Data.productAdd.st;
 ProductAddCtrl get _ct => Ctrl.productAdd;

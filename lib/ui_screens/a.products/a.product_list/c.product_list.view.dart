@@ -38,12 +38,12 @@ class ProductListView extends StatelessWidget {
                             height: 120,
                             width: 120,
                             color: const Color.fromARGB(255, 255, 196, 217),
-                            child: const Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                SizedBox(width: 40),
-                              ],
-                            ),
+                            child: _dt.rxProductList.st[index].imageUrl.isNotEmpty
+                                ? Image.network(
+                                    _dt.rxProductList.st[index].imageUrl,
+                                    fit: BoxFit.fill,
+                                  )
+                                : const Center(child: Text('tidak ada photo')),
                           ),
                           Text(_dt.rxProductList.st[index].name),
                           Text('RP. ${_dt.rxProductList.st[index].price.toString()}'),

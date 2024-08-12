@@ -22,6 +22,8 @@ class ProductAddView extends StatelessWidget {
               builder: () => const Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+                  ProductAddImage(),
+                  SizedBox(height: 30),
                   AddNameProduct(),
                   SizedBox(height: 30),
                   AddDescription(),
