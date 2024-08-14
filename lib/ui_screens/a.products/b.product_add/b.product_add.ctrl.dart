@@ -17,14 +17,13 @@ class ProductAddCtrl {
       createdAt: DateTime.now().toString(),
       price: int.parse(_dt.rxPrice.value),
       quantity: int.parse(_dt.rxQuantity.value),
-      imageUrl: "",
     );
 
     final imageUrl = await Serv.products.uploadImage(_dt.rxPickedFile.state, id);
     final productWithImage = product.copyWith(imageUrl: imageUrl);
     await Serv.products.createDoc(productWithImage);
 
-    _dt.rxProductList.st = [..._dt.rxProductList.st]..insert(0, product);
+    _dt.rxProductList.st = [..._dt.rxProductList.st]..insert(0, productWithImage);
     nav.back();
   }
 

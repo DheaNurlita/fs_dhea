@@ -57,7 +57,13 @@ class ProductsServ {
 
   delete() {
     _rp.deleteProduct(_pv.rxSelected.st);
-    _pv.rxProductlist.st = [..._pv.rxProductlist.st]..removeWhere((element) => element.id == _pv.rxSelected.st);
+
+    if (_pv.rxProductDetail.st!.imageUrl.isNotEmpty) {
+      _rp.deleteImage();
+    }
+    _pv.rxProductlist.st = [..._pv.rxProductlist.st]..removeWhere(
+        (element) => element.id == _pv.rxSelected.st,
+      );
   }
 
   //*----------------------------------------------------------------------------
@@ -75,7 +81,7 @@ class ProductsServ {
   //*----------------------------------------------------------------------------
 
   Future uploadImage(XFile? uploadImage, String docId) async {
-    final imageFromStorage = await _rp.uploadImage(uploadImage, _pv.rxSelected.state);
+    final imageFromStorage = await _rp.uploadImage(uploadImage, docId);
     return imageFromStorage;
   }
 }

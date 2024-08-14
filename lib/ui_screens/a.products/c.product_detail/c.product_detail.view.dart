@@ -27,19 +27,24 @@ class ProductDetailView extends StatelessWidget {
                 Container(
                   height: 200,
                   width: double.infinity,
-                  color: Colors.pink.shade100,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: NetworkImage(data!.imageUrl),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
                   child: Center(
                       child: Text(
-                    '${data?.name}',
+                    data.name,
                     style: const TextStyle(fontSize: 25, color: Colors.black),
                   )),
                 ),
                 const SizedBox(height: 40),
-                Text('${data?.description}'),
+                Text(data.description),
                 const SizedBox(height: 20),
-                Text('Harga : ${data?.price}'),
+                Text('Harga : ${data.price}'),
                 const SizedBox(height: 20),
-                Text('Stok : ${data?.quantity}'),
+                Text('Stok : ${data.quantity}'),
               ],
             ),
           ),
