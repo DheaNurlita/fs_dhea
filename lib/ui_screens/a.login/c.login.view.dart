@@ -5,19 +5,20 @@ class LoginView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      appBar: PreferredSize(
-        preferredSize: Size.fromHeight(56),
+    return Scaffold(
+      appBar: const PreferredSize(
+        preferredSize: const Size.fromHeight(56),
         child: LoginAppbar(),
       ),
-      floatingActionButton: LoginFab(),
+      floatingActionButton: const LoginFab(),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            LoginCharlie(),
-            LoginDelta(),
-            LoginEcho(),
+            OutlinedButton(
+              onPressed: () {},
+              child: const Text('Sign in'),
+            )
           ],
         ),
       ),

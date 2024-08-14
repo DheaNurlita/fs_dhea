@@ -27,8 +27,16 @@ class AuthServ {
     await x1fbAuth.st.createEmailandPassword(email, password);
   }
 
+  Future signInByGoogle() async {
+    await x1fbAuth.st.signInByGoogle();
+  }
+
   Future signInAnnonymouse() async {
     await x1fbAuth.st.signInAnonymouse();
+
+    _pv.rxUser.subscription = x1fbAuth.st.instance.authStateChanges().listen(
+          (event) => _pv.rxUser.st = event,
+        );
   }
 
   Future signInEmail(String email, String password) async {

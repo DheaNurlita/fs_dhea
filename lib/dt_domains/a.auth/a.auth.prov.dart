@@ -9,8 +9,9 @@ class AuthProv {
     ),
   );
 
-  final rxUser = RM.injectStream(() => Stream.value(null),
-      sideEffects: SideEffects.onData(
-        (data) {},
-      ));
+  final rxUser = RM.injectStream<User?>(() => Stream.value(null), sideEffects: SideEffects.onData(
+    (data) async {
+      await _sv.responseUser(data);
+    },
+  ));
 }
