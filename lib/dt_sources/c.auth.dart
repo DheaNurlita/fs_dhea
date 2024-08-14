@@ -41,6 +41,13 @@ class FbAuth {
 
 //*----------------------------------------------------------------------------
 
+  Future createEmailandPassword(String email, String password) async {
+    final users = await instance.createUserWithEmailAndPassword(email: email, password: password);
+
+    return users;
+  }
+//*----------------------------------------------------------------------------
+
   Future<UserCredential> signInByGoogle() async {
     UserCredential? userCredential;
 

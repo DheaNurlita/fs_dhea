@@ -8,4 +8,9 @@ class AuthProv {
       onSetState: (p0) => _sv.onSetState(),
     ),
   );
+
+  final rxUser = RM.injectStream(() => Stream.value(null),
+      sideEffects: SideEffects.onData(
+        (data) {},
+      ));
 }
