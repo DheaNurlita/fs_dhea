@@ -24,4 +24,3 @@ part 'widgets/h.product_add.image.dart';
 
 ProductAddData get _dt => Data.productAdd.st;
 ProductAddCtrl get _ct => Ctrl.productAdd;
-ProductsServ get _sv => Serv.products;
