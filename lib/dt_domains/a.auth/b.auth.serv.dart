@@ -24,6 +24,9 @@ class AuthServ {
   }
 
   Future createEmailAndPassword(String email, String password) async {
+    debugPrint('hahahaha');
+    debugPrint(email);
+    debugPrint(password);
     await x1fbAuth.st.createEmailandPassword(email, password);
   }
 
@@ -44,6 +47,9 @@ class AuthServ {
   }
 
   Future signInEmailAndPassword(String email, String password) async {
+    debugPrint('wkwkwk');
+    debugPrint(email);
+    debugPrint(password);
     await x1fbAuth.st.signInEmailPassword(email, password);
   }
 

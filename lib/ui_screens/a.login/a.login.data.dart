@@ -11,7 +11,7 @@ class LoginData {
 
   final rxForm = RM.injectForm(
     autovalidateMode: AutovalidateMode.onUserInteraction,
-    submit: () async => await _ct.submit(),
+    submit: () async => await _ct.signInEmailAndPassword(),
   );
 
   final rxEmail = RM.injectTextEditing(

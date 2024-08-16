@@ -12,6 +12,10 @@ part 'widgets/b.login.fab.dart';
 part 'widgets/c.login.email.dart';
 part 'widgets/d.login.password.dart';
 part 'widgets/e.login.submit.dart';
+part 'widgets/f.login.by.google.dart';
+part 'widgets/g.login.or.dart';
+part 'widgets/h.login.annonymouse.dart';
+part 'widgets/i.login.to.regist.dart';
 
 LoginData get _dt => Data.login.st;
 LoginCtrl get _ct => Ctrl.login;

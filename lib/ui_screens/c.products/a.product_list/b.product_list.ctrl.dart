@@ -12,4 +12,8 @@ class ProductListCtrl {
     logx.i(_dt.selectedId.st);
     nav.to(Routes.productDetail);
   }
+
+  signOut() async {
+    await Serv.auth.signOut();
+  }
 }

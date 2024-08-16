@@ -26,20 +26,29 @@ class LoginView extends StatelessWidget {
                 padding: const EdgeInsets.fromLTRB(30, 70, 30, 70),
                 child: OnFormBuilder(
                   listenTo: _dt.rxForm,
-                  builder: () => const Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        'Sign In',
-                        style: TextStyle(fontSize: 30),
-                      ),
-                      SizedBox(height: 30),
-                      LoginEmail(),
-                      SizedBox(height: 30),
-                      LoginPassword(),
-                      SizedBox(height: 30),
-                      LoginSubmit()
-                    ],
+                  builder: () => const SingleChildScrollView(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          'Sign In',
+                          style: TextStyle(fontSize: 30),
+                        ),
+                        SizedBox(height: 30),
+                        LoginEmail(),
+                        SizedBox(height: 30),
+                        LoginPassword(),
+                        SizedBox(height: 30),
+                        LoginSubmit(),
+                        SizedBox(height: 20),
+                        LoginOR(),
+                        SizedBox(height: 20),
+                        LoginAnnony(),
+                        SizedBox(height: 20),
+                        LoginByGoogle(),
+                        Register()
+                      ],
+                    ),
                   ),
                 ),
               ),
