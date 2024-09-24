@@ -11,3 +11,9 @@ export 'c.products/b.product_add/_index.dart';
 export 'c.products/c.product_detail/_index.dart';
 export 'a.login/_index.dart';
 export 'b.register/_index.dart';
+
+export 'e.try_product/a.try_list/_index.dart';
+export 'e.try_product/b.try_add/_index.dart';
+
+export 'e.try_product/c.try_detail/_index.dart';
+export 'e.try_product/d.try_edit/_index.dart';

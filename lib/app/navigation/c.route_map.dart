@@ -14,5 +14,9 @@ class RouteMap {
     Routes.productEdit: (RouteData data) => const ProductEditView(),
     Routes.login: (RouteData data) => const LoginView(),
     Routes.register: (RouteData data) => const RegisterView(),
+    Routes.tryList: (RouteData data) => const TryListView(),
+    Routes.tryAdd: (RouteData data) => const TryAddView(),
+    Routes.tryDetail: (RouteData data) => const TryDetailView(),
+    Routes.tryEdit: (RouteData data) => const TryEditView(),
   };
 }

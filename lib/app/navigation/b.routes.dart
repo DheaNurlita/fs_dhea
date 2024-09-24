@@ -13,4 +13,8 @@ class Routes {
   static const productEdit = '/product_edit';
   static const login = '/login';
   static const register = '/register';
+  static const tryList = '/try_list';
+  static const tryAdd = '/try_add';
+  static const tryDetail = '/try_detail';
+  static const tryEdit = '/try_edit';
 }

@@ -11,6 +11,10 @@ abstract class Data {
   static Injected<ProductEditData> get productEdit => _productEditData;
   static Injected<LoginData> get login => _loginData;
   static Injected<RegisterData> get register => _registerData;
+  static Injected<TryListData> get tryList => _tryListData;
+  static Injected<TryAddData> get tryAdd => _tryAddData;
+  static Injected<TryDetailData> get tryDetail => _tryDetailData;
+  static Injected<TryEditData> get tryEdit => _tryEditData;
 }
 
 final _homeData = RM1.inj(HomeData(), Ctrl.home.init);
@@ -27,3 +31,10 @@ final _productEditData = RM1.inj(ProductEditData(), Ctrl.productEdit.init);
 final _loginData = RM1.inj(LoginData(), Ctrl.login.init);
 
 final _registerData = RM1.inj(RegisterData(), Ctrl.register.init);
+
+final _tryListData = RM1.inj(TryListData(), Ctrl.tryList.init);
+
+final _tryAddData = RM1.inj(TryAddData(), Ctrl.tryAdd.init);
+
+final _tryDetailData = RM1.inj(TryDetailData(), Ctrl.tryDetail.init);
+final _tryEditData = RM1.inj(TryEditData(), Ctrl.tryEdit.init);
